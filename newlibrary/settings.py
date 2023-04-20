@@ -40,6 +40,9 @@ INSTALLED_APPS = [
 
     #external apps
     'rest_framework' , 
+    'drf_yasg',
+    'rest_framework.authtoken',
+    'dj_rest_auth' , 
 
     #local apps
     'books.apps.BooksConfig' , 
@@ -56,6 +59,19 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "newlibrary.urls"
+
+REST_FRAMEWORK = {
+
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated', 
+    ],
+
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication' 
+    ],
+
+}
 
 TEMPLATES = [
     {
