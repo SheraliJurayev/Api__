@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "django.contrib.sites", # add new package
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -42,7 +43,11 @@ INSTALLED_APPS = [
     'rest_framework' , 
     'drf_yasg',
     'rest_framework.authtoken',
-    'dj_rest_auth' , 
+    'dj_rest_auth' ,
+    'allauth' ,
+    'allauth.account' , 
+    'allauth.socialaccount' ,
+    'dj_rest_auth.registration' , 
 
     #local apps
     'books.apps.BooksConfig' , 
@@ -143,3 +148,6 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend" #new
+SITE_ID = 1 #new
