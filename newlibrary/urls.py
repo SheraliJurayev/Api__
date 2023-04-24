@@ -27,6 +27,7 @@ urlpatterns = [
 
 
     #Swagger
+    
     path( 'swagger/'  , schema_view.with_ui (
         'swagger' , cache_timeout=0 ) , name = 'swagger - swagger - ui') ,
     path('redoc/' , schema_view.with_ui(
