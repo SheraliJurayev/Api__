@@ -133,8 +133,8 @@ class BookUpdateDeleteApiView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Book.objects.all()
     serializer_class = BookSerializer  
 
-
-class BooksViewSet(ModelViewSet):
+# CRUD 
+class BooksViewSet(ModelViewSet):   
     queryset = Book.objects.all()
     serializer_class = BookSerializer 
 

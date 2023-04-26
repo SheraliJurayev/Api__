@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'allauth.account' , 
     'allauth.socialaccount' ,
     'dj_rest_auth.registration' , 
+    
 
     #local apps
     'books.apps.BooksConfig' , 
@@ -73,7 +74,7 @@ REST_FRAMEWORK = {
 
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.TokenAuthentication' 
+        'rest_framework.authentication.TokenAuthentication',
     ],
 
 }
